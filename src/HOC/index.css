@@ -1,0 +1,19 @@
+.App {
+    font-family: sans-serif;
+    text-align: center;
+    width: 500px;
+    height: 500px;
+    background: #4c029f;
+  }
+  
+  .draggable_wrapper {
+    display: inline-block;
+  }
+  
+  .mouse__position {
+    position: absolute;
+    width: 80px;
+    left: 20px;
+    top: 1px;
+    color: #fff;
+  }
