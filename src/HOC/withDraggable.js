@@ -1,18 +1,28 @@
-import React from "react";
-import Cat from './cat';
-import Mouse from './mouse';
+import React, { Component } from "react";
+import { Draggable } from "gsap/all";
 
-import './index.css'
+import "./index.css";
 
-const HOC = ()=>{
-    return (
-      <div className="App">
-      <div  className="draggable_wrapper">
-        <Cat />
-        <Mouse />
-      </div>
-      </div>
-    )
-}
+const withDrag = Wrapped => {
+  class WithDrag extends Component {
+    constructor(props) {
+      super(props);
+      this.elementRef = React.createRef();
+    }
 
-export default HOC;
+    componentDidMount = () => new Draggable(this.elementRef.current);
+
+    render = () => {
+      return (
+        <span className="draggable_wrapper" ref={this.elementRef}>
+          <Wrapped {...this.props} />
+        </span>
+      );
+    };
+  }
+  WithDrag.displayName = `WithDrag(${Wrapped.displayName || Wrapped.name})`;
+  return WithDrag;
+};
+
+export default withDrag;
+

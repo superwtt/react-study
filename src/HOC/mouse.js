@@ -1,11 +1,15 @@
-import React from "react"
+import React, { Component } from "react";
+import withDraggable from "./withDraggable";
 
-const Mouse = ()=>{
-   return (
-    <div className="cat" role="img">
-    <span>🐭</span>
-  </div>
-   )
+
+class Mouse extends Component {
+  render() {
+    return (
+      <div className="cat" role="img">
+        <span>🐱</span>
+      </div>
+    );
+  }
 }
 
-export default Mouse;
+export default withDraggable(Mouse);

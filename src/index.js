@@ -1,10 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import HOC from './HOC/withDraggable.js'
+import Mouse from "./HOC/mouse";
+import Cat from "./HOC/cat";
 
 ReactDOM.render(
   <React.StrictMode>
-    <HOC />
+    <Mouse />
+        <Cat />
   </React.StrictMode>,
   document.getElementById('root')
 );
