@@ -1,14 +1,20 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Mouse from "./HOC/mouse";
-import Cat from "./HOC/cat";
+import Mouse from "./HocDraggAble/mouse";
+import Cat from "./HocDraggAble/cat";
 
-import './HOC/index.css'
+import InpotComp from "./HocInput/hoc";
+
+import PureComp from "./pureComponent/index"
 
 ReactDOM.render(
   <React.StrictMode>
-   <Mouse />
-    <Cat />
+    {/* <>
+      <Mouse />
+      <Cat />
+    </> */}
+    {/* <InpotComp /> */}
+    <PureComp />
   </React.StrictMode>,
   document.getElementById("root")
 );
