@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import withDraggable from "./withDraggable";
 
-class Mouse extends Component {
+class Cat extends Component {
   render() {
     return (
       <div className="cat" role="img">
@@ -11,4 +11,4 @@ class Mouse extends Component {
   }
 }
 
-export default withDraggable(Mouse);
+export default withDraggable(Cat);
