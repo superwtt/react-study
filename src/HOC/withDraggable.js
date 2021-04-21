@@ -3,23 +3,33 @@ import { Draggable } from "gsap/all";
 
 import "./index.css";
 
-const withDrag = Wrapped => {
+const withDrag = (Wrapped) => {
   class WithDrag extends Component {
     constructor(props) {
       super(props);
+      this.state = {
+        x: undefined,
+        y: undefined,
+      };
       this.elementRef = React.createRef();
-      console.log(props)
     }
 
-    
+    componentDidMount = () =>
+      new Draggable(this.elementRef.current, { onDrag: this.onDrag });
 
-    componentDidMount = () => new Draggable(this.elementRef.current);
+    onDrag = (e) => {
+      const { x, y } = e.target.getBoundingClientRect();
+      this.setState({
+        x: Math.floor(x),
+        y: Math.floor(y),
+      });
+    };
 
     render = () => {
-     
+      
       return (
         <span className="draggable_wrapper" ref={this.elementRef}>
-          <Wrapped {...this.props} />
+          <Wrapped {...this.props} x={this.state.x} y={this.state.y} />
         </span>
       );
     };
@@ -29,4 +39,3 @@ const withDrag = Wrapped => {
 };
 
 export default withDrag;
-

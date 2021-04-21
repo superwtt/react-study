@@ -5,7 +5,7 @@ class Cat extends Component {
   render() {
     return (
       <div className="cat" role="img">
-        <span>🐭</span>
+        <span>🐱</span>
       </div>
     );
   }
