@@ -7,7 +7,10 @@ import InpotComp from "./HocInput/hoc";
 
 import PureComp from "./pureComponent/index";
 
-import EventComp from "./event/index"
+import EventComp from "./event/index";
+
+import ContextComp from "./context";
+
 
 ReactDOM.render(
   <React.StrictMode>
@@ -17,7 +20,8 @@ ReactDOM.render(
     </> */}
     {/* <InpotComp /> */}
     {/* <PureComp /> */}
-    <EventComp />
+    {/* <EventComp /> */}
+    <ContextComp />
   </React.StrictMode>,
   document.getElementById("root")
 );
