@@ -15,6 +15,8 @@ import ReplaceComp from "./replaceState"
 
 import Bar from "./errorBoundary/bar"
 
+import Imper from "./useImperativeHandle/index"
+
 
 ReactDOM.render(
   <React.StrictMode>
@@ -27,7 +29,8 @@ ReactDOM.render(
     {/* <EventComp /> */}
     {/* <ContextComp /> */}
     {/* <ReplaceComp /> */}
-    <Bar />
+    {/* <Bar /> */}
+    <Imper />
   </React.StrictMode>,
   document.getElementById("root")
 );
