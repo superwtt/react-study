@@ -1,24 +1,41 @@
-import React, { Component, useRef } from "react";
+import React, { Component, useRef, useState } from "react";
 import SubComponent from "./bar";
 
-const Imper = () => {
-  const subcomponents = useRef(null);
+class Imper extends Component {
 
-  const handleClick = () => {
-    console.log(subcomponents);
-    // this.refs.subcomponents.subHandleClick();
+  constructor(props){
+      super(props)
+
+      this.state = {
+          type:{
+              name:"123"
+          }
+      }
+  }  
+
+  handleClick = () => {
+    this.setState({
+        type:{
+            school:"赤壁路"
+        }
+    },()=>{
+        console.log(this.state)
+    })
   };
-  return (
-    <div>
-      <input
-        type="button"
-        value="点我调用子组件方法"
-        onClick={handleClick}
-      />
-      <SubComponent ref={subcomponents} />
-    </div>
-  );
-};
+  render() {
+    return (
+      <div>
+        <input
+          type="button"
+          value="点我调用子组件方法"
+          onClick={this.handleClick}
+        />
+        
+        {/* <SubComponent ref={subcomponents} /> */}
+      </div>
+    );
+  }
+}
 
 export default Imper;
 
