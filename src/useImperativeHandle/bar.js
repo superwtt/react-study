@@ -17,6 +17,7 @@
 
 
 import React, { forwardRef,useImperativeHandle } from "react";
+  
 
 const Bar = forwardRef((props,ref) => {
 
@@ -28,3 +29,5 @@ const Bar = forwardRef((props,ref) => {
 });
 
 export default Bar;
+ 
+
