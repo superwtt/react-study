@@ -9,7 +9,7 @@ import PureComp from "./pureComponent/index";
 
 import EventComp from "./event/index";
 
-import ContextComp from "./context";
+import ContextComp from "./context/手动实现";
 
 import ReplaceComp from "./replaceState"
 
@@ -27,10 +27,10 @@ ReactDOM.render(
     {/* <InpotComp /> */}
     {/* <PureComp /> */}
     {/* <EventComp /> */}
-    {/* <ContextComp /> */}
+    <ContextComp />
     {/* <ReplaceComp /> */}
     {/* <Bar /> */}
-    <Imper />
+    {/* <Imper /> */}
   </React.StrictMode>,
   document.getElementById("root")
 );
