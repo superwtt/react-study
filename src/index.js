@@ -17,6 +17,8 @@ import Bar from "./errorBoundary/bar"
 
 import Imper from "./useImperativeHandle/index"
 
+import ChildImp from "./children"
+
 
 ReactDOM.render(
   <React.StrictMode>
@@ -27,10 +29,11 @@ ReactDOM.render(
     {/* <InpotComp /> */}
     {/* <PureComp /> */}
     {/* <EventComp /> */}
-    <ContextComp />
+    {/* <ContextComp /> */}
     {/* <ReplaceComp /> */}
     {/* <Bar /> */}
     {/* <Imper /> */}
+    <ChildImp />
   </React.StrictMode>,
   document.getElementById("root")
 );
