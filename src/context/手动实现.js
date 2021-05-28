@@ -80,7 +80,7 @@ class AppBody2 extends React.PureComponent {
     );
   }
 }
-console.log(AppBody2);
+// console.log(AppBody2);
 
 class App extends React.Component {
   constructor(props) {
